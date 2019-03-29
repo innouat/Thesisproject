@@ -45,7 +45,7 @@ class Common {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $_url);
         curl_setopt($ch, CURLOPT_POST, 1);
-		curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
+		curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($postData));
 		
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-type: application/json"));
